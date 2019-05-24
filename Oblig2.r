@@ -39,8 +39,24 @@ chisq.test(rta)
 
 
 # Task 22
+# Reading the GMaze table from a .csv file
 dataset <- read.csv("C:\\Users\\soknu\\Documents\\GitHub\\DASPSTATv2019\\data.csv", sep = ",")
 
-a <- aov(CS, data=dataset)
+attach(dataset)
 
-summary(a)
+
+# GP
+model_gp <- aov(rt~GP)
+
+summary(model_gp)
+
+
+# CS
+model_cs <- aov(rt~CS)
+
+summary(model_cs)
+
+
+# Interaction
+boxplot(rt~GP+CS)
+interaction.plot(GP,CS,rt)
