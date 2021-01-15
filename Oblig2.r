@@ -40,7 +40,7 @@ chisq.test(rta)
 
 # Task 22
 # Reading the GMaze table from a .csv file
-dataset <- read.csv("C:\\Users\\soknu\\Documents\\GitHub\\DASPSTATv2019\\data.csv", sep = ",")
+dataset <- read.csv("data.csv", sep = ",")
 
 attach(dataset)
 
